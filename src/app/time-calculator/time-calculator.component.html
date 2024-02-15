@@ -1,0 +1,383 @@
+<div class="container">
+  <div class="main_form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="Longitude" class="form-label">longitude</label>
+        <input
+          type="text"
+          class="form-control"
+          id="longitude"
+          name="longitude"
+          formControlName="longitude"
+          placeholder="longitude"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Longitude" class="form-label">Tcf</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Tcf"
+          name="Tcf"
+          formControlName="Tcf"
+          placeholder="Tcf"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Longitude" class="form-label">A</label>
+        <input
+          type="text"
+          class="form-control"
+          id="heureChrono"
+          name="heureChrono"
+          formControlName="heureChrono"
+          placeholder="heureChrono"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Longitude" class="form-label">erreurChrono e </label>
+        <input
+          type="text"
+          class="form-control"
+          id="erreurChrono"
+          name="erreurChrono"
+          formControlName="erreurChrono"
+          placeholder="erreurChrono"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Longitude" class="form-label">Tc0 - A</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Tc0A"
+          name="Tc0A"
+          formControlName="Tc0A"
+          placeholder="Tc0A"
+        />
+      </div>
+     
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid ">
+        Submit
+      </button>
+    </form>
+    <p>TC<small>0</small> exact : {{tc0Exact}} / {{alerte}}</p>
+  </div>
+<h1>2eme etape hauteur</h1>
+  <div class="main_form">
+    <form [formGroup]="form2" (ngSubmit)="onSubmit2()" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="hauteur_observe" class="form-label">hauteur_observe</label>
+        <input
+          type="text"
+          class="form-control"
+          id="hauteur_observe"
+          name="hauteur_observe"
+          formControlName="hauteur_observe"
+          placeholder="hauteur_observe"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="E" class="form-label">E</label>
+        <input
+          type="text"
+          class="form-control"
+          id="E"
+          name="E"
+          formControlName="E"
+          placeholder="E"
+        />
+      </div>
+     
+   
+  
+     
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!form2.valid ">
+        Submit
+      </button>
+    </form>
+    <p>hauteur apres E : {{hauteur_a_e}} </p>
+  </div>
+  <h1>Cor 1</h1>
+  <div class="main_form">
+    <form [formGroup]="form3"  (ngSubmit)="onSubmit3()" enctype="multipart/form-data">
+      
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="A" class="form-label">A</label>
+          <input
+            type="text"
+            class="form-control"
+            id="A"
+            name="A"
+            formControlName="A"
+            placeholder="A"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="a1" class="form-label">a1</label>
+          <input
+            type="text"
+            class="form-control"
+            id="a1"
+            name="a1"
+            formControlName="a1"
+            placeholder="a1"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="a2" class="form-label">a2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="a2"
+            name="a2"
+            formControlName="a2"
+            placeholder="a2"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="B" class="form-label">hauteur apres E</label>
+          <input
+            type="text"
+            class="form-control"
+            id="B"
+            name="B"
+            formControlName="B"
+            placeholder="B"
+          />
+        </div>
+        
+        <div class="mb-3 col">
+          <label for="x" class="form-label" >x</label>
+          <input
+            type="text"
+            class="form-control"
+            id="x"
+            name="x"
+            
+            formControlName="x"
+            placeholder="x"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="x" class="form-label" >x</label>
+          <input
+            type="text"
+            class="form-control"
+            id="x"
+            name="x"
+            
+            formControlName="x"
+            placeholder="x"
+          />
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="mb-3 col">
+          <label for="C" class="form-label">C</label>
+          <input
+            type="text"
+            class="form-control"
+            id="C"
+            name="C"
+            formControlName="C"
+            placeholder="C"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="c1" class="form-label">c1</label>
+          <input
+            type="text"
+            class="form-control"
+            id="c1"
+            name="c1"
+            formControlName="c1"
+            placeholder="c1"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="c2" class="form-label">c2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="c2"
+            name="c2"
+            formControlName="c2"
+            placeholder="c2"
+          />
+        </div>
+      </div>
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!form3.valid ">
+        Submit
+      </button>
+    </form>
+    <p>cor1 : {{cor1_str}} </p>
+    <p>hauteur apres cor1 : {{hauteur_a_cor1}} </p>
+  </div>
+  <h1>calcule de D et P</h1>
+  <div class="main_form">
+    <form [formGroup]="form4"  (ngSubmit)="onSubmit4()" enctype="multipart/form-data">
+      
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="hauteur_a_cor1 " class="form-label">hauteur exact</label>
+          <input
+            type="text"
+            class="form-control"
+            id="hauteur_a_cor1"
+            name="hauteur_a_cor1"
+            formControlName="hauteur_a_cor1"
+            placeholder="hauteur_a_cor1"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="latitude" class="form-label">latitude</label>
+          <input
+            type="text"
+            class="form-control"
+            id="latitude"
+            name="latitude"
+            formControlName="latitude"
+            placeholder="latitude"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="z" class="form-label">azinut</label>
+          <input
+            type="text"
+            class="form-control"
+            id="z"
+            name="z"
+            formControlName="z"
+            placeholder="z"
+          />
+        </div>
+      </div>
+     
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!form4.valid">
+        Submit
+      </button>
+    </form>
+    <p>D : {{DVar}} </p>
+    <p>P : {{PVar}} </p>
+  </div>
+  <h1>calcule de AVa</h1>
+  <div class="main_form">
+    <form [formGroup]="form5"  (ngSubmit)="onSubmit5()" enctype="multipart/form-data">
+      
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="AHs0 " class="form-label">AHs0</label>
+          <input
+            type="text"
+            class="form-control"
+            id="AHs0"
+            name="AHs0"
+            formControlName="AHs0"
+            placeholder="AHs0"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="longitude" class="form-label">longitude</label>
+          <input
+            type="text"
+            class="form-control"
+            id="longitude"
+            name="longitude"
+            formControlName="longitude"
+            placeholder="longitude"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="AHag" class="form-label">AHag</label>
+          <input
+            type="text"
+            class="form-control"
+            id="AHag"
+            name="AHag"
+            formControlName="AHag"
+            placeholder="AHag"
+          />
+        </div>
+      </div>
+     
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!form5.valid">
+        Submit
+      </button>
+    </form>
+    <p>AVa : {{AVaVar}} </p>
+  </div>
+  <h1>calcule de variation (W)</h1>
+  <div class="main_form">
+    <form [formGroup]="form6"  (ngSubmit)="onSubmit6()" enctype="multipart/form-data">
+      
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="AHsg " class="form-label">AHsg</label>
+          <input
+            type="text"
+            class="form-control"
+            id="AHsg"
+            name="AHsg"
+            formControlName="AHsg"
+            placeholder="AHsg"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="latitude" class="form-label">latitude</label>
+          <input
+            type="text"
+            class="form-control"
+            id="latitude"
+            name="latitude"
+            formControlName="latitude"
+            placeholder="latitude"
+          />
+        </div>
+       
+      </div>
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="DVar" class="form-label">D exact</label>
+          <input
+            type="text"
+            class="form-control"
+            id="DVar"
+            name="DVar"
+            formControlName="DVar"
+            placeholder="DVar"
+          />
+        </div>
+        <div class="mb-3 col">
+          <label for="AVa" class="form-label">AVa exact</label>
+          <input
+            type="text"
+            class="form-control"
+            id="AVa"
+            name="AVa"
+            formControlName="AVa"
+            placeholder="AVa"
+          />
+        </div>
+       
+      </div>
+     
+     
+      <button type="submit" class="btn btn-primary" [disabled]="!form6.valid">
+        Submit
+      </button>
+    </form>
+    <p>Ze : {{zeVar}} </p>
+    <p>Variation W : {{wVar}} </p>
+  </div>
+</div>
+

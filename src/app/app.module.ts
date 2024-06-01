@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TimeCalculatorComponent } from './time-calculator/time-calculator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { OrthoComponent } from './ortho/ortho.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimeCalculatorComponent
+    TimeCalculatorComponent,
+    HeaderComponent,
+    OrthoComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
